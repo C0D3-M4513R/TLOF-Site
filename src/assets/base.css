@@ -1,4 +1,14 @@
 :root {
+/*
+  --logo-blue: #00ffe1;
+  --logo-yellow: hsl(62.12, 100%, 50%);
+*/
+  --logo-blue: hsl(172.85, 92.64%, 68.04%);
+  --logo-blue-dark: hsl(172.85, 92.64%, 29%);
+  --logo-yellow: hsl(62.2, 80.59%, 53.53%);
+  --logo-yellow-dark: hsl(62.12, 100%, 30%);
+  --logo-gray: #CECFCE;
+
   /* LIGHT THEME */
   --light-color-background: #f5f5f5;
   --light-color-background-soft: #f9f9f9;
@@ -15,8 +25,8 @@
   --light-color-secondary-dark: #808080;
   --light-color-secondary-light: #d3d3d3;
 
-  --light-color-link: #DDDDDD;
-  --light-color-link-opposite: #515151;
+  --light-color-link: #515151;
+  --light-color-link-opposite: #DDDDDD;
   --light-color-link-hover: #AAAAAA;
   --light-color-link-secondary: #000000;
   --light-color-link-secondary-hover: #333333;
@@ -56,8 +66,13 @@
   --color-heading: var(--light-color-heading);
   --color-text: var(--light-color-text);
 
+/*
   --color-primary: var(--light-color-primary);
   --color-primary-dark: var(--light-color-primary-dark);
+*/
+  --color-primary: var(--logo-yellow);
+  --color-primary-dark: var(--logo-yellow-dark);
+  --color-primary-text: #222;
   --color-primary-light: var(--light-color-primary-light);
 
   --color-secondary: var(--light-color-secondary);
@@ -82,8 +97,10 @@
     --color-heading: var(--dark-color-heading);
     --color-text: var(--dark-color-text);
 
+/*
     --color-primary: var(--dark-color-primary);
     --color-primary-dark: var(--dark-color-primary-dark);
+*/
     --color-primary-light: var(--dark-color-primary-light);
 
     --color-secondary: var(--dark-color-secondary);

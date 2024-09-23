@@ -1,6 +1,6 @@
 <script setup>
 import { faBars, faBarsStaggered } from '@fortawesome/free-solid-svg-icons';
-import { faGithub, faDiscord } from "@fortawesome/free-brands-svg-icons";
+import { faYoutube, faDiscord } from "@fortawesome/free-brands-svg-icons";
 </script>
 
 <template>
@@ -16,15 +16,14 @@ import { faGithub, faDiscord } from "@fortawesome/free-brands-svg-icons";
         <router-link class="nav-item" @click="showMobileMenu = false" to="/">Home</router-link>
         <router-link class="nav-item" @click="showMobileMenu = false" :to="{ name: 'FAQ' }">FAQ</router-link>
         <router-link class="nav-item" @click="showMobileMenu = false" :to="{ name: 'Team' }">Team</router-link>
-        <router-link class="nav-item" @click="showMobileMenu = false" :to="{ name: 'Download' }">Download</router-link>
       </nav>
       <div class="flex-grow-all"></div>
       <div class="navbar-icons" aria-label="Other Useful Links">
         <a class="navbar-icon" :href="global.discordUrl" target="_blank" aria-label="Discord Link">
           <font-awesome-icon :icon="faDiscord" />
         </a>
-        <a class="navbar-icon" :href="global.githubUrl" target="_blank" aria-label="Github Link">
-          <font-awesome-icon :icon="faGithub" />
+        <a class="navbar-icon" :href="global.tlofYoutubeUrl" target="_blank" aria-label="Youtube Link">
+          <font-awesome-icon :icon="faYoutube" />
         </a>
       </div>
     </div>
@@ -56,7 +55,14 @@ export default {
 }
 
 .nav-menu {
-  background-color: var(--color-primary);
+/*
+  background: var(--logo-blue-dark);
+  background: -moz-linear-gradient(90deg, var(--logo-yellow) 0%, var(--logo-yellow-dark) 30%, var(--logo-blue-dark) 65%, var(--logo-blue) 100%);
+  background: -webkit-linear-gradient(90deg, var(--logo-yellow) 0%, var(--logo-yellow-dark) 30%, var(--logo-blue-dark) 65%, var(--logo-blue) 100%);
+  background: linear-gradient(90deg, var(--logo-yellow) 0%, var(--logo-yellow-dark) 30%, var(--logo-blue-dark) 65%, var(--logo-blue) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#e1e829",endColorstr="#62f9e7",GradientType=1);
+*/
+  background: var(--color-background-soft);
 }
 
 .nav-content {

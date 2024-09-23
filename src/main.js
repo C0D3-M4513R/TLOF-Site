@@ -57,10 +57,10 @@ export const createApp = ViteSSG(
         base: import.meta.env.BASE_URL,
     },
     // function to have custom setups
-    ({ app, router, routes, isClient, initialState }) => {
+    ({ app, _router, _routes, _isClient, _initialState }) => {
         //unhead setup start
         app.config.globalProperties.unhead = {
-            baseTitle: "Ketting",
+            baseTitle: "TLOF",
             separator: " • ",
             formattedTitle: function(pageTitle) {
                 return this.baseTitle + this.separator + pageTitle;
@@ -73,9 +73,9 @@ export const createApp = ViteSSG(
 
         //Create some global properties
         app.config.globalProperties.global = {
-            url: "https://kettingpowered.org/",
-            discordUrl: "https://discord.kettingpowered.org/",
-            githubUrl: "https://github.com/kettingpowered/",
+            url: "https://tlof.party/",
+            discordUrl: "https://discord.tlof.party/",
+            tlofYoutubeUrl: "https://www.youtube.com/@thelandoffuture",
             launcherUrl: "https://launcher.kettingpowered.org/",
             imageUrl: "https://github.com/kettingpowered.png",
             downloadUrl: "https://reposilite.c0d3m4513r.com/Ketting-Server-Releases/org/kettingpowered/server/forge/maven-metadata.xml",

@@ -8,11 +8,11 @@ export default {
   <section class="main">
     <div class="content">
       <div id="info">
-        <h1>Ketting</h1>
-        <h2>Forge with Bukkit & Spigot support</h2>
+        <h1>The Land of Future</h1>
+        <h2>Psytrance, Bigroom and Harstyle VRChat Parties</h2>
 
         <div class="button-group">
-          <router-link :to="{ name: 'Download' }" class="button primary">Downloads</router-link>
+          <a :href="global.discordUrl" class="button primary">Discord</a>
           <router-link :to="{ name: 'FAQ' }" class="button" id="faq">FAQ</router-link>
         </div>
       </div>
@@ -20,7 +20,7 @@ export default {
       <div id="terminal-container">
         <picture>
           <source media="(max-width: 1000px)" srcset="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" />
-          <img src="@/assets/ketting-startup.png" height="300" width="493" alt="Terminal" id="terminal" />
+          <img src="@/assets/tlof.webp" height="512" width="512" alt="Terminal" id="terminal" />
         </picture>
       </div>
     </div>
@@ -34,7 +34,7 @@ export default {
   align-content: center;
 }
 #faq {
-  color: var(--color-link-opposite);
+  color: var(--color-link);
 }
 #info {
   justify-content: center;
@@ -60,6 +60,7 @@ export default {
 }
 .button.primary {
   background-color: var(--color-primary);
+  color: var(--light-color-link);
 }
 .button.primary:hover {
   background-color: var(--color-primary-dark);
@@ -71,8 +72,8 @@ export default {
 }
 #terminal {
   border-radius: 10px;
-  box-shadow: 0 0 15px black;
-  margin: 20px;
+/*  box-shadow: 0 0 15px black;*/
+  margin: 20px 20px 20px 80px;
 }
 
 @media (max-width: 1000px) {

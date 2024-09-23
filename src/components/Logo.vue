@@ -6,8 +6,8 @@ export default {
 
 <template>
   <div class="logo">
-    <img class="logo-img" src="@/assets/ketting.webp" alt="Ketting Logo Image">
-    <h2 class="logo-header" aria-label="Ketting Logo Text">Ketting</h2>
+    <img class="logo-img" src="@/assets/tlof.webp" width="512" height="512" alt="TLOF Logo Image">
+    <h2 class="logo-header" aria-label="TLOF Logo Text">TLOF</h2>
   </div>
 </template>
 
@@ -27,8 +27,12 @@ export default {
   font-size: 1.5rem;
   margin-left: 3px;
 
-  background: linear-gradient(45deg, #901c6e, #62869d, #ea6e19, #fae033, #f2c6a4);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--logo-blue-dark);
+}
+
+@media (prefers-color-scheme: dark) {
+  .logo-header {
+    color: var(--logo-blue);
+  }
 }
 </style>
