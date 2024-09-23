@@ -31,3 +31,6 @@ coverage
 nginx.conf
 compose.yml
 update.sh	
+/.envrc
+/.direnv
+/shell.nix

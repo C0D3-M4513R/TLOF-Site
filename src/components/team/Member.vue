@@ -1,9 +1,10 @@
 <script setup>
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faGithub, faTwitter, faTwitch, faYoutube } from "@fortawesome/free-brands-svg-icons";
 </script>
 
 <script>
+import { faGithub, faPatreon, faInstagram, faTiktok, faTwitter, faTwitch, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
 export default {
   name: "Member",
   head(){
@@ -57,6 +58,28 @@ export default {
       //youtube
       if (url.includes('youtube.com'))
         return faYoutube;
+
+      //patreon
+      if (url.includes('patreon.com'))
+        return faPatreon;
+
+      //instragram
+      if (url.includes('instagram.com'))
+        return faInstagram;
+
+      //TikTok
+      if (url.includes('tiktok.com'))
+        return faTiktok;
+
+      //kofi
+      if (url.includes('ko-fi.com'))
+        return ["fab", "kofi"]; /* Todo: Use FAB kofi-icon when available */
+
+      //VRChat
+      if (url.includes('vrchat.com') || url.includes('vrc.group'))
+        return ["fab", "vrchat"]; /* Todo: Use FAB vrc-icon when available */
+
+      return faLink;
     },
     getLabelFromUrl(url) {
       if (url.includes('github.com'))
@@ -72,8 +95,30 @@ export default {
       //youtube
       if (url.includes('youtube.com'))
         return 'Youtube';
+
+      //patreon
+      if (url.includes('patreon.com'))
+        return 'Patreon';
+
+      //instragram
+      if (url.includes('instagram.com'))
+        return 'Instagram';
+
+      //TikTok
+      if (url.includes('tiktok.com'))
+        return 'Tiktok';
+
+      //kofi
+      if (url.includes('ko-fi.com'))
+        return 'Ko-Fi';
+
+      //VRChat
+      if (url.includes('vrchat.com') || url.includes('vrc.group'))
+        return 'VRChat';
+
+      return 'Unknown';
     }
-  }
+  },
 }
 </script>
 
@@ -116,17 +161,30 @@ export default {
 .owner {
   --role-color: #660000;
 }
+
 .admin {
-  --role-color: #ffcc00;
+  --role-color: rgb(255, 146, 0);
+}
+.co-admin {
+  --role-color: rgb(152, 93, 179);
+}
+.security {
+  --role-color: rgb(39, 126, 205);
+}
+.dj {
+  --role-color: rgb(255, 216, 0);
+}
+.poster-creator {
+  --role-color: rgb(52, 152, 219);
+}
+.special-dancer {
+  --role-color: rgb(255, 0, 0);
+}
+.photograph {
+  --role-color: rgb(0, 255, 233);
 }
 .staff {
-  --role-color: #ff6633;
-}
-.helper {
-  --role-color: #ff3333;
-}
-.contributor {
-  --role-color: #33cc99;
+  --role-color: rgb(230, 126, 34);
 }
 
 .member {
