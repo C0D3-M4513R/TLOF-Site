@@ -43,6 +43,11 @@ export default {
       required: false
     }
   },
+  computed: {
+    socialIcons(){
+      return this.socials.map(v=>[this.determineSocialIconFromUrl(v), this.getLabelFromUrl(v), v]);
+    }
+  },
   methods: {
     determineSocialIconFromUrl(url) {
       if (url.includes('github.com'))
@@ -155,8 +160,8 @@ export default {
       </ul>
     </details>
     <div class="socials">
-      <a v-for="social in socials" :href="social" target="_blank" :aria-label="getLabelFromUrl(social)">
-        <font-awesome-icon :icon="determineSocialIconFromUrl(social)"></font-awesome-icon>
+      <a v-for="[icon, label, link] in socialIcons" :href="link" target="_blank" :aria-label="label">
+        <font-awesome-icon :icon="icon"></font-awesome-icon>
       </a>
     </div>
   </div>
