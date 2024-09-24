@@ -207,7 +207,7 @@ export default {
   background: var(--color-background-mute);
   border: 1px solid var(--color-border);
   border-radius: 0.5rem;
-  width: 250px;
+  min-width: 250px;
 }
 
 .avatar img {
