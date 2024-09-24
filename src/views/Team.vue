@@ -1,14 +1,9 @@
 <script>
-import angel from '@/assets/team/team-angel.webp';
-import itsJustSage from '@/assets/team/team-its-just-sage.webp';
-import shadowwolfvr from '@/assets/team/team-shadowwolfvr.webp';
-import vaalde from '@/assets/team/team-vaalde.webp';
-import KTZLRMZ from '@/assets/team/team-KTZLRMZ.webp';
-import MotokoSusubo from '@/assets/team/team-MotokoSusubo.webp';
-import Saya from '@/assets/team/team-Saya.webp';
-import SnugglesPrime from '@/assets/team/team-SnugglesPrime.webp';
-
 import Member from "@/components/team/Member.vue";
+const team_path = "assets/team/team-";
+const teamLogos = Object.fromEntries(
+    Object.entries(import.meta.glob('@/assets/team/team-*.webp',{eager: true})).map(([k, v], _) => [k.slice(k.lastIndexOf(team_path) + team_path.length, -5), v.default])
+);
 
 export default {
   name: "Team",
@@ -50,16 +45,7 @@ export default {
     };
   },
   data: function () {
-    return {
-      angel: angel,
-      itsJustSage: itsJustSage,
-      shadowwolfvr: shadowwolfvr,
-      vaalde: vaalde,
-      KTZLRMZ: KTZLRMZ,
-      MotokoSusubo: MotokoSusubo,
-      Saya: Saya,
-      SnugglesPrime: SnugglesPrime,
-    }
+    return teamLogos;
   },
   components: {
     Member
@@ -87,7 +73,7 @@ export default {
       />
       <Member
           name="its just sage"
-          :image="itsJustSage"
+          :image="$data['its-just-sage']"
           :roles="['Security', 'Photograph']"
           :socials="['https://www.youtube.com/channel/UCc0nSwExRN75mM8bJr4nNyA']"
       />
