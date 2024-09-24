@@ -7,7 +7,7 @@ const questionsAndAnswers = [
     {
         id: "team",
         question: "Who are the developers?",
-        answer: ["Our developers are listed on the ", {component: 'router-link', props: {to: '/team'}, content:'team page'}, '.'],
+        answer: ["Our developers are listed on the ", {component: 'router-link', props: {to: { name: 'Team' }}, content:'team page'}, '.'],
         safe: "Our developers are listed on the team page."
     },
     {

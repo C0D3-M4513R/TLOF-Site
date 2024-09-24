@@ -35,7 +35,7 @@ export default {
   },
   methods: {
     copyToClipboard(event) {
-      const url = this.global.url + 'faq/' + this.id;
+      const url = this.global.url + 'faq/' + this.id + '/';
       navigator.clipboard.writeText(url);
       this.copyNotification = true;
       setTimeout(() => {
