@@ -76,6 +76,22 @@ export default {
   margin: 20px 20px 20px 80px;
 }
 
+.content {
+  display: flex;
+  justify-content: center;
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+#heading .content {
+  max-width: 80rem;
+}
+
+.content > div {
+  display: flex;
+  flex-direction: column;
+}
+
 @media (max-width: 1000px) {
   #terminal-container {
     display: none;
