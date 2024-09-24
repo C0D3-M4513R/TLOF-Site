@@ -50,9 +50,9 @@ export default {
           answer: "Ketting is a Minecraft server hybrid, combing Forge, Bukkit and Spigot."
         },
         {
-          id: "developers",
+          id: "team",
           question: "Who are the developers?",
-          answer: "Our developers are listed on the <router-link to='/team'>team page</router-link>.",
+          answer: ["Our developers are listed on the ", {component: 'router-link', props: {to: '/team'}, content:'team page'}, '.'],
           safe: "Our developers are listed on the team page."
         },
         {
@@ -134,7 +134,7 @@ export default {
   <div id="content">
     <h1>FAQ</h1>
     <div class="questions">
-      <QnA class="question" v-for="qna in questionsAndAnswers" :id="qna.id" :key="qna.id" :question="qna.question" :desc="replacePlaceholders(qna.answer)" :expanded="expanded(qna.id)" />
+      <QnA class="question" v-for="qna in questionsAndAnswers" :id="qna.id" :key="qna.id" :question="qna.question" :desc="qna.answer" :expanded="expanded(qna.id)" />
     </div>
   </div>
 </template>

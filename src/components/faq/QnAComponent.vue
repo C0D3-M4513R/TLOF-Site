@@ -1,5 +1,6 @@
 <script setup>
 import { faLink } from "@fortawesome/free-solid-svg-icons";
+import TextComponent from "@/components/faq/TextComponent.vue";
 </script>
 <script>
 export default {
@@ -71,7 +72,9 @@ export default {
         {{ question }}
         <font-awesome-icon class="copy-icon" v-if="showIcon" :icon="faLink" @click="copyToClipboard"/>
       </summary>
-      <div class="desc" v-html="desc"></div>
+      <div class="desc">
+        <TextComponent :text="desc"></TextComponent>
+      </div>
     </details>
     <div v-if="copyNotification" class="notification-banner">
       Link copied to clipboard!
