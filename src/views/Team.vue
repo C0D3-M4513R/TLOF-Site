@@ -77,6 +77,34 @@ export default {
           :roles="['Photograph']"
       />
       <Member
+          name="TouchMeSama"
+          :image="TouchMeSama"
+          :roles="['Special Dancer']"
+          :socials="['https://www.youtube.com/@Touch_Me_Sama']"
+      />
+      <Member
+          name="Trylobot"
+          :image="Trylobot"
+          :roles="['Special Dancer']"
+      />
+      <Member
+          name="Smis"
+          :image="Smis"
+          :roles="['Special Dancer']"
+          :socials="['https://www.twitch.tv/scalie_smis']"
+      />
+      <Member
+          name="Werty"
+          :image="Werty"
+          :roles="['Special Dancer']"
+      />
+      <Member
+          name="AviDie"
+          :image="AviDie"
+          :roles="['Special Dancer']"
+          :socials="['https://www.instagram.com/avidie_bimbo/']"
+      />
+      <Member
           name="Hotdog Milkwater"
           :image="$data['hotdog-milkwater']"
           :roles="['Poster Creator']"
@@ -129,7 +157,7 @@ export default {
       <Member
           name="Vaalde"
           :image="vaalde"
-          :roles="['Security','Special-Dancer']"
+          :roles="['Security','Special Dancer']"
       />
     </div>
   </div>
