@@ -30,20 +30,7 @@ export default {
       required: true
     }
   },
-  watch: {
-    expanded: function (newValue) {
-      if (newValue) {
-        this.$el.getElementsByClassName('detail')[0].setAttribute('open', '');
-      } else {
-        this.$el.getElementsByClassName('detail')[0].removeAttribute('open');
-      }
-    }
-  },
   mounted() {
-    if (this.expanded) {
-      this.$el.getElementsByClassName('detail')[0].setAttribute('open', '');
-    }
-
     this.mobile = window.innerWidth <= 1280;
   },
   methods: {
@@ -67,7 +54,7 @@ export default {
 
 <template>
   <div class='qna'>
-    <details class="detail">
+    <details class="detail" :open="expanded ? '': null">
       <summary @mouseover="showCopyIcon = true" @mouseleave="showCopyIcon = false">
         {{ question }}
         <font-awesome-icon class="copy-icon" v-if="showIcon" :icon="faLink" @click="copyToClipboard"/>
