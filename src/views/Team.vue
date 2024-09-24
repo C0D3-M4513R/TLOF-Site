@@ -88,6 +88,12 @@ export default {
           :socials="['https://github.com/4liceD', 'https://twitch.tv/4licedj', 'https://twitch.tv/4liced', 'https://twitter.com/4liceD_', 'https://www.youtube.com/channel/UCUhShRY32UCEg44pkTEmZMwa']"
       />
       <Member
+          name="Saya"
+          :image="Saya"
+          :roles="['DJ']"
+          :socials="['https://ko-fi.com/sayavr', 'https://www.youtube.com/@DVJSaya', 'https://twitter.com/Saya2023Saya', 'https://vrc.group/SAYA.8833']"
+      />
+      <Member
           name="KTZLRMZ"
           :image="KTZLRMZ"
           :roles="['DJ']"
@@ -97,12 +103,6 @@ export default {
           name="MotokoSusubo"
           :image="MotokoSusubo"
           :roles="['DJ']"
-      />
-      <Member
-          name="Saya"
-          :image="Saya"
-          :roles="['DJ']"
-          :socials="['https://ko-fi.com/sayavr', 'https://www.youtube.com/@DVJSaya', 'https://twitter.com/Saya2023Saya', 'https://vrc.group/SAYA.8833']"
       />
       <Member
           name="SnugglesPrime"
