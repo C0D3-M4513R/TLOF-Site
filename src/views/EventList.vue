@@ -26,7 +26,7 @@ export default {
         },
         {
           property: 'og:url',
-          content: this.global.url
+          content: this.global.url + "events/"
         },
         {
           name: 'theme-color',
@@ -35,7 +35,7 @@ export default {
       ],
       link: {
         rel: 'canonical',
-        href: this.global.url
+        href: this.global.url + "events/"
       }
     };
   },

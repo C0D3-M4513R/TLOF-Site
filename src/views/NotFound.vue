@@ -25,7 +25,7 @@ export default {
         },
         {
           property: 'og:url',
-          content: this.global.url + '404'
+          content: this.global.url + '404/'
         },
         {
           name: 'theme-color',

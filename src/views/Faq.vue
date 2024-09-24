@@ -29,7 +29,7 @@ export default {
         },
         {
           property: 'og:url',
-          content: this.global.url + 'faq'
+          content: this.global.url + 'faq/'
         },
         {
           name: 'theme-color',
@@ -38,7 +38,7 @@ export default {
       ],
       link: {
         rel: 'canonical',
-        href: this.global.url + 'faq'
+        href: this.global.url + 'faq/'
       }
     };
   },
