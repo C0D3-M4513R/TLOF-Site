@@ -125,7 +125,7 @@ export default {
           name="Saya"
           :image="Saya"
           :roles="['DJ']"
-          :socials="['https://ko-fi.com/sayavr', 'https://www.youtube.com/@DVJSaya', 'https://twitter.com/Saya2023Saya']"
+          :socials="['https://ko-fi.com/sayavr', 'https://www.youtube.com/@DVJSaya', 'https://twitter.com/Saya2023Saya', 'https://vrc.group/SAYA.8833']"
       />
       <Member
           name="SnugglesPrime"

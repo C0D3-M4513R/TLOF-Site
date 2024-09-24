@@ -77,7 +77,7 @@ export default {
 
       //VRChat
       if (url.includes('vrchat.com') || url.includes('vrc.group'))
-        return ["fab", "vrchat"]; /* Todo: Use FAB vrc-icon when available */
+        return ["fab", "vrchat-short"]; /* Todo: Use FAB vrc-icon when available */
 
       return faLink;
     },
