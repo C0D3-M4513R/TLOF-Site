@@ -23,12 +23,12 @@ export default {
         /*OpenGraph description. Mostly for Social Platforms*/
         {
           property: 'og:description',
-          content: 'Ketting, Forge with Bukkit & Spigot support'
+          content: 'The Land of Future\'s Team'
         },
         /*Description for Search Enginges*/
         {
           name: 'description',
-          content: 'Ketting, Forge with Bukkit & Spigot support'
+          content: 'The Land of Future\'s Team'
         },
         {
           property: 'og:image',

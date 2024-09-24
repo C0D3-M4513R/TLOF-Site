@@ -15,12 +15,12 @@ export default {
         /*OpenGraph description. Mostly for Social Platforms*/
         {
           property: 'og:description',
-          content: 'Ketting, Forge with Bukkit & Spigot support'
+          content: 'Psytrance, Bigroom and Harstyle VRChat Parties'
         },
         /*Description for Search Enginges*/
         {
           name: 'description',
-          content: 'Ketting, Forge with Bukkit & Spigot support'
+          content: 'Psytrance, Bigroom and Harstyle VRChat Parties'
         },
         {
           property: 'og:image',

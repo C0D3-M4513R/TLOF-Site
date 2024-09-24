@@ -3,6 +3,7 @@ import './assets/main.css'
 import { ViteSSG } from 'vite-ssg'
 import { VueHeadMixin } from '@unhead/vue'
 import App from './App.vue'
+import logo from '@/assets/tlof.webp'
 
 /* import the fontawesome core */
 import { library, config } from '@fortawesome/fontawesome-svg-core'
@@ -93,7 +94,7 @@ export const createApp = ViteSSG(
     ({ app, _router, _routes, _isClient, _initialState }) => {
         //unhead setup start
         app.config.globalProperties.unhead = {
-            baseTitle: "TLOF",
+            baseTitle: "The Land of Future",
             separator: " • ",
             formattedTitle: function(pageTitle) {
                 return this.baseTitle + this.separator + pageTitle;
@@ -110,7 +111,7 @@ export const createApp = ViteSSG(
             discordUrl: "https://discord.tlof.party/",
             tlofYoutubeUrl: "https://www.youtube.com/@thelandoffuture",
             launcherUrl: "https://launcher.kettingpowered.org/",
-            imageUrl: "https://github.com/kettingpowered.png",
+            imageUrl: logo,
             downloadUrl: "https://reposilite.c0d3m4513r.com/Ketting-Server-Releases/org/kettingpowered/server/forge/maven-metadata.xml",
             featherInstallUrl: "https://youtu.be/Vt0MdkmhkXA",
             softwareUrl: function(version) {
