@@ -86,9 +86,9 @@ export const createApp = ViteSSG(
                 component: () => import('@/views/Team.vue')
             },
             {
-                path: '/download',
-                name: 'Download',
-                component: () => import('@/views/Download.vue')
+                path: '/events',
+                name: 'Events',
+                component: () => import('@/views/EventList.vue')
             },
             //Explicitly generate page at 404. Otherwise, SSG doesn't generate a site for this.
             {
