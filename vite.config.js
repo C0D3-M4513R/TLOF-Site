@@ -48,7 +48,7 @@ export default defineConfig({
     includedRoutes(paths, routes) {
       return routes.flatMap(route => {
         if (route.path === '/:catchAll(.*)') return []
-        return route.path === '/faq/:id?' ? faqIds.map(id => `/faq/${id}`) : route.path
+        return route.path === '/faq/:id?/' ? faqIds.map(id => `/faq/${id}/`) : route.path
       });
     }
   }

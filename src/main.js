@@ -71,28 +71,28 @@ export const createApp = ViteSSG(
                 component: () => import('@/views/Home.vue')
             },
             {
-                path: '/faq',
+                path: '/faq/',
                 name: 'FAQ',
                 component: () => import('@/views/Faq.vue')
             },
             {
-                path: '/faq/:id?',
+                path: '/faq/:id?/',
                 name: 'FAQ',
                 component: () => import('@/views/Faq.vue')
             },
             {
-                path: '/team',
+                path: '/team/',
                 name: 'Team',
                 component: () => import('@/views/Team.vue')
             },
             {
-                path: '/events',
+                path: '/events/',
                 name: 'Events',
                 component: () => import('@/views/EventList.vue')
             },
             //Explicitly generate page at 404. Otherwise, SSG doesn't generate a site for this.
             {
-                path: '/404',
+                path: '/404/',
                 name: 'NotFound',
                 component: () => import('@/views/NotFound.vue')
             },
@@ -105,7 +105,7 @@ export const createApp = ViteSSG(
         base: import.meta.env.BASE_URL,
     },
     // function to have custom setups
-    ({ app, _router, _routes, _isClient, _initialState }) => {
+    ({ app, router, _routes, _isClient, _initialState }) => {
         //unhead setup start
         app.config.globalProperties.unhead = {
             baseTitle: "The Land of Future",
@@ -127,5 +127,10 @@ export const createApp = ViteSSG(
             tlofVRChatUrl: "https://vrc.group/TLOF.9942",
             imageUrl: logo,
         };
+        if (typeof window !== 'undefined') {
+            router.afterEach((to, from, fail) => {
+                app.config.globalProperties.global.url = window.location.href.slice(0, -to.fullPath.length+1);
+            })
+        }
     }
 )
