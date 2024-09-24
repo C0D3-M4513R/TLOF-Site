@@ -20,13 +20,6 @@ export default {
       type: String,
       required: true
     },
-    border: {
-      type: String,
-      required: true,
-      validator: function (value) {
-        return ['top', 'bottom', 'sides'].includes(value);
-      }
-    },
     expanded: {
       type: Boolean,
       required: true
@@ -68,7 +61,7 @@ export default {
 </script>
 
 <template>
-  <div :class="['qna', border]">
+  <div class='qna'>
     <details class="detail">
       <summary @mouseover="showCopyIcon = true" @mouseleave="showCopyIcon = false">
         {{ qna.question }}
@@ -93,25 +86,25 @@ export default {
 }
 
 /*borders start*/
-.top {
+.qna:first-child {
   border-top: 1px solid var(--color-border);
   border-left: 1px solid var(--color-border);
   border-right: 1px solid var(--color-border);
   border-top-left-radius: 0.8rem;
   border-top-right-radius: 0.8rem;
 }
-.bottom {
+.qna:last-child {
   border-bottom: 1px solid var(--color-border);
   border-left: 1px solid var(--color-border);
   border-right: 1px solid var(--color-border);
   border-bottom-left-radius: 0.8rem;
   border-bottom-right-radius: 0.8rem;
 }
-.bottom .desc {
+.qna:last-child .desc {
   border-bottom-left-radius: 0.8rem;
   border-bottom-right-radius: 0.8rem;
 }
-.sides {
+.qna:not(:last-child, :first-child) {
   border-left: 1px solid var(--color-border);
   border-right: 1px solid var(--color-border);
 }

@@ -3,7 +3,7 @@ import { fileURLToPath, URL } from 'node:url'
 import {defineConfig, splitVendorChunkPlugin} from 'vite'
 import vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
-import {faqIds} from './src/data/faq/questions.js'
+import Faq from '@/views/Faq.vue'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -47,7 +47,7 @@ export default defineConfig({
     includedRoutes(paths, routes) {
       return routes.flatMap(route => {
         if (route.path === '/:catchAll(.*)') return []
-        return route.path === '/faq/:id?' ? faqIds.map(id => `/faq/${id}`) : route.path
+        return route.path === '/faq/:id?' ? Faq.data().map(item => item.id).map(id => `/faq/${id}`) : route.path
       });
     }
   }

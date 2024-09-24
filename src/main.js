@@ -125,20 +125,7 @@ export const createApp = ViteSSG(
             discordUrl: "https://discord.tlof.party/",
             tlofYoutubeUrl: "https://www.youtube.com/@thelandoffuture",
             tlofVRChatUrl: "https://vrc.group/TLOF.9942",
-            launcherUrl: "https://launcher.kettingpowered.org/",
             imageUrl: logo,
-            downloadUrl: "https://reposilite.c0d3m4513r.com/Ketting-Server-Releases/org/kettingpowered/server/forge/maven-metadata.xml",
-            featherInstallUrl: "https://youtu.be/Vt0MdkmhkXA",
-            softwareUrl: function(version) {
-                if (version.startsWith("1.20")) {
-                    return this.githubUrl + "Ketting-1-20-x/";
-                } else if (version.startsWith("1.21")) {
-                    return this.githubUrl + "Ketting-1-21-x/";
-                } else {
-                    return this.githubUrl + "Ketting-1-20-x/";
-                }
-            },
-            deprecatedVersions: ["1.20.2", "1.20.3", "1.20.4"],
         };
     }
 )
