@@ -126,6 +126,11 @@ export default {
           :roles="['DJ']"
           :socials="['https://twitter.com/snugglesprime']"
       />
+      <Member
+          name="Willow"
+          :image="willow"
+          :roles="['Photograph']"
+      />
     </div>
   </div>
 </template>
