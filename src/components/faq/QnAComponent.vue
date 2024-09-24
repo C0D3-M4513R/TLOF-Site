@@ -22,7 +22,7 @@ export default {
       required: true,
     },
     desc: {
-      type: String,
+      type: [String, Array],
       required: true
     },
     expanded: {
