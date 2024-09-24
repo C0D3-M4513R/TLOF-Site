@@ -159,6 +159,10 @@ export default {
           :image="vaalde"
           :roles="['Security','Special Dancer']"
       />
+      <Member
+          name="Joy-vr"
+          :image="$data['Joy-vr']"
+      />
     </div>
   </div>
 </template>

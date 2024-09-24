@@ -36,7 +36,7 @@ export default {
     },
     roles: {
       type: Array,
-      required: true
+      required: false
     },
     socials: {
       type: Array,
@@ -150,7 +150,7 @@ export default {
         </div>
       </div>
       <div class="role-container">
-        <div class="role" v-for="[role, roleClass] in roleClasses" :key="role" :class="roleClass">
+        <div class="role" v-for="[role, roleClass] in roleClasses" :key="role" :class="roleClass" v-if="roles">
           <span class="role-color" :class="roleClass"></span>
           <span class="role-name">{{ role }}</span>
         </div>
