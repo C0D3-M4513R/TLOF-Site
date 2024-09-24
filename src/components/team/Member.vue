@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 </script>
 
 <script>
-import { faGithub, faPatreon, faInstagram, faTiktok, faTwitter, faTwitch, faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faPatreon, faDiscord, faInstagram, faTiktok, faTwitter, faTwitch, faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 export default {
   name: "Member",
@@ -79,6 +79,9 @@ export default {
       if (url.includes('vrchat.com') || url.includes('vrc.group'))
         return ["fab", "vrchat-short"]; /* Todo: Use FAB vrc-icon when available */
 
+      if (url === this.global.discordUrl || url.includes('discord.gg'))
+        return faDiscord;
+
       return faLink;
     },
     getLabelFromUrl(url) {
@@ -115,6 +118,9 @@ export default {
       //VRChat
       if (url.includes('vrchat.com') || url.includes('vrc.group'))
         return 'VRChat';
+
+      if (url === this.global.discordUrl || url.includes('discord.gg'))
+        return 'Discord';
 
       return 'Unknown';
     }

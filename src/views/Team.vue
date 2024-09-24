@@ -76,7 +76,7 @@ export default {
           :image="angel"
           :roles="['Owner', 'Admin']"
           :description="['Creator & Owner of The Land of Future', 'Main DJ', 'Event Coordinator', 'and much, much more']"
-          :socials="['https://www.youtube.com/@thelandoffuture', 'https://patreon.com/DJTheLandofFuture', 'https://twitter.com/TheLandofFuture', 'https://www.instagram.com/the_land_of_future/', 'https://www.tiktok.com/@thelandoffuture']"
+          :socials="[global.tlofVRChatUrl, global.discordUrl, global.tlofYoutubeUrl, 'https://patreon.com/DJTheLandofFuture', 'https://twitter.com/TheLandofFuture', 'https://www.instagram.com/the_land_of_future/', 'https://www.tiktok.com/@thelandoffuture']"
       />
       <Member
           name="C0D3 M4513R"
