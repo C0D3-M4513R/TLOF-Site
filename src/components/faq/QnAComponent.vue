@@ -12,8 +12,12 @@ export default {
     }
   },
   props: {
-    qna: {
-      type: Object,
+    id: {
+      type: String,
+      required: true,
+    },
+    question: {
+      type: String,
       required: true,
     },
     desc: {
@@ -43,7 +47,7 @@ export default {
   },
   methods: {
     copyToClipboard(event) {
-      const url = this.global.url + 'faq/' + this.qna.id;
+      const url = this.global.url + 'faq/' + this.id;
       navigator.clipboard.writeText(url);
       this.copyNotification = true;
       setTimeout(() => {
@@ -64,7 +68,7 @@ export default {
   <div class='qna'>
     <details class="detail">
       <summary @mouseover="showCopyIcon = true" @mouseleave="showCopyIcon = false">
-        {{ qna.question }}
+        {{ question }}
         <font-awesome-icon class="copy-icon" v-if="showIcon" :icon="faLink" @click="copyToClipboard"/>
       </summary>
       <div class="desc" v-html="desc"></div>

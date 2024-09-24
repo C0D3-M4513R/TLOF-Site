@@ -134,7 +134,7 @@ export default {
   <div id="content">
     <h1>FAQ</h1>
     <div class="questions">
-      <QnA class="question" v-for="qna in questionsAndAnswers" :id="qna.id" :key="qna.id" :qna="qna" :desc="replacePlaceholders(qna.answer)" :expanded="expanded(qna.id)" />
+      <QnA class="question" v-for="qna in questionsAndAnswers" :id="qna.id" :key="qna.id" :question="qna.question" :desc="replacePlaceholders(qna.answer)" :expanded="expanded(qna.id)" />
     </div>
   </div>
 </template>
