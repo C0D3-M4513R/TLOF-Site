@@ -72,6 +72,16 @@ export default {
           :socials="['https://github.com/C0D3-M4513R', 'https://ko-fi.com/c0d3_m4513r','https://twitter.com/C0D3M4513R', 'https://www.twitch.tv/c0d3_m4513r', 'https://www.youtube.com/channel/UC30moJmnYyVmD2RkhRjOxpw']"
       />
       <Member
+          name="Fissy"
+          :image="fissy"
+          :roles="['Photograph']"
+      />
+      <Member
+          name="Hotdog Milkwater"
+          :image="$data['hotdog-milkwater']"
+          :roles="['Poster Creator']"
+      />
+      <Member
           name="its just sage"
           :image="$data['its-just-sage']"
           :roles="['Security', 'Photograph']"

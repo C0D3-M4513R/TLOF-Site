@@ -46,6 +46,9 @@ export default {
   computed: {
     socialIcons(){
       return this.socials.map(v=>[this.determineSocialIconFromUrl(v), this.getLabelFromUrl(v), v]);
+    },
+    roleClasses(){
+      return this.roles.map(v=>[v, v.replace(' ', '-').toLowerCase()]);
     }
   },
   methods: {
@@ -147,8 +150,8 @@ export default {
         </div>
       </div>
       <div class="role-container">
-        <div class="role" v-for="role in roles" :key="role" :class="role.toLowerCase()">
-          <span class="role-color" :class="role.toLowerCase()"></span>
+        <div class="role" v-for="[role, roleClass] in roleClasses" :key="role" :class="roleClass">
+          <span class="role-color" :class="roleClass"></span>
           <span class="role-name">{{ role }}</span>
         </div>
       </div>
