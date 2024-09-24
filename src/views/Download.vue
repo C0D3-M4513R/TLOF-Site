@@ -31,7 +31,7 @@ export default {
         },
         {
           name: 'theme-color',
-          content: '#770708'
+          content: this.global.themeColor,
         },
       ],
       link: [

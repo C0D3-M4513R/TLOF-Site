@@ -125,11 +125,16 @@ export const createApp = ViteSSG(
             discordUrl: "https://discord.tlof.party/",
             tlofYoutubeUrl: "https://www.youtube.com/@thelandoffuture",
             tlofVRChatUrl: "https://vrc.group/TLOF.9942",
+            themeColor: '#e1e829',
             imageUrl: logo,
         };
         if (typeof window !== 'undefined') {
-            router.afterEach((to, from, fail) => {
-                app.config.globalProperties.global.url = window.location.href.slice(0, -to.fullPath.length+1);
+            let remove = router.afterEach((to, from, fail) => {
+                let newPath = window.location.href.slice(0, -to.fullPath.length+1);
+                if (newPath.length === 0) newPath = "/";
+                app.config.globalProperties.global.url = newPath;
+                remove();
+                remove = undefined;
             })
         }
     }
