@@ -124,6 +124,7 @@ export const createApp = ViteSSG(
             url: "https://tlof.party/",
             discordUrl: "https://discord.tlof.party/",
             tlofYoutubeUrl: "https://www.youtube.com/@thelandoffuture",
+            tlofVRChatUrl: "https://vrc.group/TLOF.9942",
             launcherUrl: "https://launcher.kettingpowered.org/",
             imageUrl: logo,
             downloadUrl: "https://reposilite.c0d3m4513r.com/Ketting-Server-Releases/org/kettingpowered/server/forge/maven-metadata.xml",

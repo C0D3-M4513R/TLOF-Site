@@ -25,6 +25,9 @@ import { faYoutube, faDiscord } from "@fortawesome/free-brands-svg-icons";
         <a class="navbar-icon" :href="global.tlofYoutubeUrl" target="_blank" aria-label="Youtube Link">
           <font-awesome-icon :icon="faYoutube" />
         </a>
+        <a class="navbar-icon" :href="global.tlofVRChatUrl" target="_blank" aria-label="VRChat Group Link">
+          <font-awesome-icon :icon="['fab', 'vrchat-short']" />
+        </a>
       </div>
     </div>
   </header>
