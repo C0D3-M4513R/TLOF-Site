@@ -1,12 +1,12 @@
 <script>
-import angel from '@/assets/team-angel.webp';
-import itsJustSage from '@/assets/team-its-just-sage.webp';
-import shadowwolfvr from '@/assets/team-shadowwolfvr.webp';
-import vaalde from '@/assets/team-vaalde.webp';
-import KTZLRMZ from '@/assets/team-KTZLRMZ.webp';
-import MotokoSusubo from '@/assets/team-MotokoSusubo.webp';
-import Saya from '@/assets/team-Saya.webp';
-import SnugglesPrime from '@/assets/team-SnugglesPrime.webp';
+import angel from '@/assets/team/team-angel.webp';
+import itsJustSage from '@/assets/team/team-its-just-sage.webp';
+import shadowwolfvr from '@/assets/team/team-shadowwolfvr.webp';
+import vaalde from '@/assets/team/team-vaalde.webp';
+import KTZLRMZ from '@/assets/team/team-KTZLRMZ.webp';
+import MotokoSusubo from '@/assets/team/team-MotokoSusubo.webp';
+import Saya from '@/assets/team/team-Saya.webp';
+import SnugglesPrime from '@/assets/team/team-SnugglesPrime.webp';
 
 import Member from "@/components/team/Member.vue";
 
