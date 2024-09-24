@@ -11,6 +11,8 @@ config.autoAddCss = false; //This causes a CSP error
 import "@fortawesome/fontawesome-svg-core/styles.css"; //we include it instead directly here.
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
+const devHost = true;
+
 library.add([
     /*
         Todo: Use FAB kofi-icon when available.
@@ -128,7 +130,7 @@ export const createApp = ViteSSG(
             themeColor: '#e1e829',
             imageUrl: logo,
         };
-        if (typeof window !== 'undefined') {
+        if (devHost && typeof window !== 'undefined') {
             let remove = router.afterEach((to, from, fail) => {
                 let newPath = window.location.href.slice(0, -to.fullPath.length+1);
                 if (newPath.length === 0) newPath = "/";
