@@ -80,27 +80,24 @@ export default {
 }
 
 /*borders start*/
-.qna:first-child {
-  border-top: 1px solid var(--color-border);
+.qna {
   border-left: 1px solid var(--color-border);
   border-right: 1px solid var(--color-border);
+}
+
+.qna:first-child {
+  border-top: 1px solid var(--color-border);
   border-top-left-radius: 0.8rem;
   border-top-right-radius: 0.8rem;
 }
 .qna:last-child {
   border-bottom: 1px solid var(--color-border);
-  border-left: 1px solid var(--color-border);
-  border-right: 1px solid var(--color-border);
   border-bottom-left-radius: 0.8rem;
   border-bottom-right-radius: 0.8rem;
 }
 .qna:last-child .desc {
   border-bottom-left-radius: 0.8rem;
   border-bottom-right-radius: 0.8rem;
-}
-.qna:not(:last-child, :first-child) {
-  border-left: 1px solid var(--color-border);
-  border-right: 1px solid var(--color-border);
 }
 /*borders end*/
 
