@@ -159,7 +159,7 @@ export default {
         <li>{{sDescription}}</li>
       </ul>
     </details>
-    <div class="socials">
+    <div class="socials" v-if="socials">
       <a v-for="[icon, label, link] in socialIcons" :href="link" target="_blank" :aria-label="label">
         <font-awesome-icon :icon="icon"></font-awesome-icon>
       </a>

@@ -95,13 +95,11 @@ export default {
           name="ShadowsWolfVR"
           :image="shadowwolfvr"
           :roles="['Security']"
-          :socials="[]"
       />
       <Member
           name="Vaalde"
           :image="vaalde"
           :roles="['Security','Special-Dancer']"
-          :socials="[]"
       />
       <Member
           name="AliceD"
@@ -119,7 +117,6 @@ export default {
           name="MotokoSusubo"
           :image="MotokoSusubo"
           :roles="['DJ']"
-          :socials="[]"
       />
       <Member
           name="Saya"
