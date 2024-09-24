@@ -82,22 +82,6 @@ export default {
           :roles="['Poster Creator']"
       />
       <Member
-          name="its just sage"
-          :image="$data['its-just-sage']"
-          :roles="['Security', 'Photograph']"
-          :socials="['https://www.youtube.com/channel/UCc0nSwExRN75mM8bJr4nNyA']"
-      />
-      <Member
-          name="ShadowsWolfVR"
-          :image="shadowwolfvr"
-          :roles="['Security']"
-      />
-      <Member
-          name="Vaalde"
-          :image="vaalde"
-          :roles="['Security','Special-Dancer']"
-      />
-      <Member
           name="AliceD"
           image="https://github.com/4liceD.png?size=256"
           :roles="['DJ']"
@@ -130,6 +114,22 @@ export default {
           name="Willow"
           :image="willow"
           :roles="['Photograph']"
+      />
+      <Member
+          name="its just sage"
+          :image="$data['its-just-sage']"
+          :roles="['Security', 'Photograph']"
+          :socials="['https://www.youtube.com/channel/UCc0nSwExRN75mM8bJr4nNyA']"
+      />
+      <Member
+          name="ShadowsWolfVR"
+          :image="shadowwolfvr"
+          :roles="['Security']"
+      />
+      <Member
+          name="Vaalde"
+          :image="vaalde"
+          :roles="['Security','Special-Dancer']"
       />
     </div>
   </div>
