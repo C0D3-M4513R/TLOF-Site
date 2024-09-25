@@ -1,5 +1,11 @@
 const questionsAndAnswers = [
     {
+        id: 'vrctl',
+        question: 'Is there anywhere, where I can see all Clubbing Events happening?',
+        answer: 'Yes, there is. There is a community maintained <a href="https://vrc.tl/">Timeline of all Clubbing Events</a>.',
+        safe: 'Yes, there is. There is a community maintained Timeline of all Clubbing Events (https://vrc.tl/").',
+    },
+    {
         id: "what-is-tlof",
         question: "What is The Land of Future?",
         answer: "The Land of Futures does VRChat parties. We mainly play in Club Orion and mainly play Psytrance, Bigroom and Hardstyle."
@@ -33,7 +39,7 @@ const questionsAndAnswers = [
         question: "I've been kicked from one of the events or banned from the group!",
         answer: "Sorry to hear that.<br> We usually kick people, if they are annoying or have the dj blocked. Bans are usually reserved for crashers or hackers.<br>If you were kicked, you can re-join the lobby after a short wait (VRChat is not very specific there, but usually it's c.a. 15min-1h).<br>And for bans, we don't revert them.",
         safe: "Sorry to hear that.\n We usually kick people, if they are annoying or have the dj blocked. Bans are usually reserved for crashers or hackers.\n If you were kicked, you can re-join the lobby after a short wait (VRChat is not very specific there, but usually it's c.a. 15min-1h).\nAnd for bans, we don't revert them.",
-    },
+    }
 ];
 
 const faqIds = questionsAndAnswers.map((item) => item.id);
