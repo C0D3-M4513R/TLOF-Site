@@ -91,7 +91,16 @@ export default {
   <div id="content">
     <h1>FAQ</h1>
     <div class="questions">
-      <QnA class="question" v-for="qna in questionsAndAnswers" :id="qna.id" :key="qna.id" :question="qna.question" :desc="qna.answer" :expanded="expanded(qna.id)" />
+      <QnA
+          class="question"
+          v-for="qna in questionsAndAnswers"
+          :id="qna.id"
+          :key="qna.id"
+          :question="qna.question"
+          :desc="qna.answer"
+          :expanded="expanded(qna.id)"
+          :replacements="[{from: '%DISCORD_URL%', to: global.discordUrl}]"
+      />
     </div>
   </div>
 </template>

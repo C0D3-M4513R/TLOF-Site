@@ -28,6 +28,19 @@ export default {
     expanded: {
       type: Boolean,
       required: true
+    },
+    replacements: {
+      type: Array,
+      default: [],
+      required: false,
+      validator(value) {
+        for (value of value) {
+          if (typeof value.from !== 'string' || typeof value.to !== 'string') {
+            return false;
+          }
+        }
+        return true;
+      }
     }
   },
   mounted() {
@@ -60,7 +73,7 @@ export default {
         <font-awesome-icon class="copy-icon" v-if="showIcon" :icon="faLink" @click="copyToClipboard"/>
       </summary>
       <div class="desc">
-        <TextComponent :text="desc"></TextComponent>
+        <TextComponent :text="desc" :replacements="replacements"></TextComponent>
       </div>
     </details>
     <div v-if="copyNotification" class="notification-banner">
@@ -124,11 +137,11 @@ summary {
   background-color: var(--color-background-mute);
 }
 
-.desc:deep(a) {
-  color: var(--color-link-secondary);
+.desc:deep(a[href]) {
+  color: var(--color-primary);
 }
-.desc:deep(a:hover) {
-  color: var(--color-link-secondary-hover);
+.desc:deep(a[href]:hover) {
+  color: var(--color-primary-dark);
 }
 
 .copy-icon {
