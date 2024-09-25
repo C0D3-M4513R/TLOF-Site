@@ -197,6 +197,9 @@ export default {
 .photograph {
   --role-color: rgb(0, 255, 233);
 }
+.world-creator {
+  --role-color: rgb(148, 255, 185);
+}
 .staff {
   --role-color: rgb(230, 126, 34);
 }

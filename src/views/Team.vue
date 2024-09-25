@@ -163,6 +163,15 @@ export default {
           name="Joy-vr"
           :image="$data['Joy-vr']"
       />
+      <Member
+          name="SHATAXE"
+          :image="SHATAXE"
+          :roles="['World Creator']"
+      />
+      <Member
+          name="BlackWiddow"
+          :image="BlackWiddow"
+      />
     </div>
   </div>
 </template>
