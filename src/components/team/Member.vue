@@ -200,6 +200,9 @@ export default {
 .world-creator {
   --role-color: rgb(148, 255, 185);
 }
+.livestream-team {
+  --role-color: rgb(231, 76, 60);
+}
 .staff {
   --role-color: rgb(230, 126, 34);
 }

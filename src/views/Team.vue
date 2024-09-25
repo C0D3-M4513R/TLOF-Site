@@ -80,7 +80,7 @@ export default {
           name="TouchMeSama"
           :image="TouchMeSama"
           :roles="['Special Dancer']"
-          :socials="['https://www.youtube.com/@Touch_Me_Sama']"
+          :socials="['https://www.youtube.com/@touch_me_sama3773']"
       />
       <Member
           name="Trylobot"
@@ -171,6 +171,7 @@ export default {
       <Member
           name="BlackWiddow"
           :image="BlackWiddow"
+          :roles="['Livestream Team']"
       />
     </div>
   </div>
