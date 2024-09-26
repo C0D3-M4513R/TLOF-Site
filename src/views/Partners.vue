@@ -1,6 +1,7 @@
 <script>
-import UnderConstruction from "@/views/UnderConstruction.vue";
+import {partners} from "@/data/partners/partners.js";
 import Member from "@/components/team/Member.vue";
+
 export default {
   name: "Team",
   head() {
@@ -40,16 +41,40 @@ export default {
       }
     };
   },
+  data(){
+    return {partners};
+  },
   components: {
-    UnderConstruction
+    Member,
   }
 }
 </script>
 
 <template>
-<UnderConstruction></UnderConstruction>
+  <div id="content">
+    <h1>Meet Partners of The Land of Future</h1>
+    <div class="partners">
+      <template v-for="partner of partners" :key="partner.name">
+        <Member v-if="partner.linksBack" :name="partner.name" :image="partner.logo" :socials="partner.socials"/>
+      </template>
+    </div>
+  </div>
 </template>
 
 <style scoped>
+#content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70vw;
+  margin: 20px auto;
+}
 
+.partners {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
 </style>
