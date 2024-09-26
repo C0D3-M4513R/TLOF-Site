@@ -53,47 +53,105 @@ export default {
       return new Date(dateTime) === startDateTime;
     }
   },
+  computed: {
+    futureEvents() {
+      const currentDateTime = new Date();
+      return this.events.filter(v=>v.startDate > currentDateTime);
+    },
+    pastEvents() {
+      const currentDateTime = new Date();
+      return this.events.filter(v=>v.startDate <= currentDateTime);
+    },
+  },
   components: {
     Event,
-    UnderConstruction,
   },
 };
 </script>
 
 <template>
-  <UnderConstruction/>
-  <div class="events">
-    <Event
-        v-for="event in events"
-        class="event"
-        :key="event.startDate.toISOString()"
-        :name="event.name"
-        :start-date="event.startDate"
-        :poster="event.poster"
-        :description="event.description"
-        :club="event.club"
-        :expanded="expanded(event.startDate)"
-    />
+  <div class="warning">
+    <div>
+      <h1>Note: The posters are not yet in their final shape or spot.</h1>
+      <h1>The Event times should be accurate and in local time, though that hasn't been tested so far.</h1>
+      <h1>So please double check the Event times in Discord for now.</h1>
+      <h1>If the times differ, are not in local time or are not accurate, please contact us in Discord.</h1>
+    </div>
+  </div>
+  <div id="content">
+    <details v-if="pastEvents.length !== 0" :open="futureEvents.length === 0">
+      <summary><h1>Previous Events</h1></summary>
+      <div class="events boarder">
+        <Event
+            v-for="event in pastEvents"
+            class="event"
+            :key="event.startDate.toISOString()"
+            :name="event.name"
+            :start-date="event.startDate"
+            :poster="event.poster"
+            :description="event.description"
+            :club="event.club"
+            :expanded="expanded(event.startDate)"
+        />
+      </div>
+    </details>
+    <details v-if="futureEvents.length !== 0" :open="pastEvents.length === 0">
+      <summary><h1>Future Events</h1></summary>
+      <div class="events boarder">
+        <Event
+            v-for="event in futureEvents"
+            class="event"
+            :key="event.startDate.toISOString()"
+            :name="event.name"
+            :start-date="event.startDate"
+            :poster="event.poster"
+            :description="event.description"
+            :club="event.club"
+            :expanded="expanded(event.startDate)"
+        />
+      </div>
+    </details>
   </div>
 </template>
 
 <style scoped>
-.events {
-  padding-top: 50px;
+.warning {
+  border: 10px solid red;
 }
+.events {
+  width: 95%;
+  margin: 0 auto;
+}
+
+details > summary > h1 {
+  display: inline-block;
+}
+
 /*borders start*/
+.events.boarder > .event {
+  border-width: 0 1px 0 1px;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.events.boarder > .event:first-child {
+  border-top-width: 1px;
+
+}
+.events.boarder > .event:last-child {
+  border-bottom-width: 1px;
+}
 .events > .event {
-  border-left: 1px solid var(--color-border);
-  border-right: 1px solid var(--color-border);
+  border-style: solid;
+  border-color: var(--color-border);
+  border-width: 0;
 }
 
 .events > .event:first-child {
-  border-top: 1px solid var(--color-border);
   border-top-left-radius: 0.8rem;
   border-top-right-radius: 0.8rem;
 }
 .events > .event:last-child {
-  border-bottom: 1px solid var(--color-border);
   border-bottom-left-radius: 0.8rem;
   border-bottom-right-radius: 0.8rem;
 }
@@ -101,12 +159,12 @@ export default {
   border-bottom-left-radius: 0.8rem;
   border-bottom-right-radius: 0.8rem;
 }
+/*borders end*/
+
 .events > .event {
   background-color: var(--color-background-mute);
-  padding: 20px;
 }
 .events > .event:nth-child(even) {
   background-color: var(--color-background);
 }
-/*borders end*/
 </style>

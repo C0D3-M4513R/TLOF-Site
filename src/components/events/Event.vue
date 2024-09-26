@@ -76,10 +76,6 @@ export default {
 </template>
 
 <style scoped>
-.event {
-  width: 80%;
-  margin: 0 auto;
-}
 .poster {
   width: 100%;
 }
