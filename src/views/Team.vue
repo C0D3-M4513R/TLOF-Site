@@ -62,7 +62,7 @@ export default {
           :image="angel"
           :roles="['Owner', 'Admin']"
           :description="['Creator & Owner of The Land of Future', 'Main DJ', 'Event Coordinator', 'and much, much more']"
-          :socials="[global.tlofVRChatUrl, global.discordUrl, global.tlofYoutubeUrl, 'https://patreon.com/DJTheLandofFuture', 'https://twitter.com/TheLandofFuture', 'https://www.instagram.com/the_land_of_future/', 'https://www.tiktok.com/@thelandoffuture']"
+          :socials="['https://linktr.ee/thelandoffuture', 'https://patreon.com/DJTheLandofFuture', 'https://twitter.com/TheLandofFuture', 'https://www.instagram.com/the_land_of_future/', 'https://www.tiktok.com/@thelandoffuture']"
       />
       <Member
           name="C0D3 M4513R"
@@ -168,6 +168,7 @@ export default {
         <Member
             name="Joy-vr"
             :image="$data['Joy-vr']"
+            :socials="['https://www.youtube.com/@NekoJoyVR', 'https://discord.gg/9BaZGfZzbX', 'https://linktr.ee/joy_vr', 'https://twitter.com/Joy_crazy_neko']"
         />
         <Member
             name="SHATAXE"

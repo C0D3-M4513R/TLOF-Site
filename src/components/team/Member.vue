@@ -87,6 +87,10 @@ export default {
       if (url.includes('vrchat.com') || url.includes('vrc.group'))
         return ["fab", "vrchat-short"]; /* Todo: Use FAB vrc-icon when available */
 
+      //Linktree
+      if (url.includes('linktr.ee'))
+        return ["fab", "linktree"];
+
       if (url === this.global.discordUrl || url.includes('discord.gg'))
         return faDiscord;
 
@@ -126,6 +130,10 @@ export default {
       //VRChat
       if (url.includes('vrchat.com') || url.includes('vrc.group'))
         return 'VRChat';
+
+      //Linktree
+      if (url.includes('linktr.ee'))
+        return 'Linktree';
 
       if (url === this.global.discordUrl || url.includes('discord.gg'))
         return 'Discord';
