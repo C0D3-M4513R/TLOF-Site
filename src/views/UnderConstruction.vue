@@ -8,7 +8,7 @@ export default {
   <div id="content">
     <span class="warning"></span>
     <h1>Under Construction</h1>
-    <p>This page is under construction. Please check back later.</p>
+    <p>This page is under construction. Content might be missing or incorrect. Styling might also change later on.</p>
   </div>
 </template>
 
