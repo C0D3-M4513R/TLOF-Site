@@ -99,80 +99,82 @@ export default {
           :roles="['Special Dancer']"
       />
       <Member
-          name="AviDie"
-          :image="AviDie"
-          :roles="['Special Dancer']"
-          :socials="['https://www.instagram.com/avidie_bimbo/']"
+          name="BlackWiddow"
+          :image="BlackWiddow"
+          :roles="['Livestream Team']"
       />
       <Member
           name="Hotdog Milkwater"
           :image="$data['hotdog-milkwater']"
           :roles="['Poster Creator']"
       />
-      <Member
-          name="AliceD"
-          image="https://github.com/4liceD.png?size=256"
-          :roles="['DJ']"
-          :socials="['https://github.com/4liceD', 'https://twitch.tv/4licedj', 'https://twitch.tv/4liced', 'https://twitter.com/4liceD_', 'https://www.youtube.com/channel/UCUhShRY32UCEg44pkTEmZMwa']"
-      />
-      <Member
-          name="Saya"
-          :image="Saya"
-          :roles="['DJ']"
-          :socials="['https://ko-fi.com/sayavr', 'https://www.youtube.com/@DVJSaya', 'https://twitter.com/Saya2023Saya', 'https://vrc.group/SAYA.8833']"
-      />
-      <Member
-          name="KTZLRMZ"
-          :image="KTZLRMZ"
-          :roles="['DJ']"
-          :socials="['https://www.twitch.tv/maxe_killermiez']"
-      />
-      <Member
-          name="MotokoSusubo"
-          :image="MotokoSusubo"
-          :roles="['DJ']"
-      />
-      <Member
-          name="SnugglesPrime"
-          :image="SnugglesPrime"
-          :roles="['DJ']"
-          :socials="['https://twitter.com/snugglesprime']"
-      />
-      <Member
-          name="Willow"
-          :image="willow"
-          :roles="['Photograph']"
-      />
-      <Member
-          name="its just sage"
-          :image="$data['its-just-sage']"
-          :roles="['Security', 'Photograph']"
-          :socials="['https://www.youtube.com/channel/UCc0nSwExRN75mM8bJr4nNyA']"
-      />
-      <Member
-          name="ShadowsWolfVR"
-          :image="shadowwolfvr"
-          :roles="['Security']"
-      />
-      <Member
-          name="Vaalde"
-          :image="vaalde"
-          :roles="['Security','Special Dancer']"
-      />
-      <Member
-          name="Joy-vr"
-          :image="$data['Joy-vr']"
-      />
-      <Member
-          name="SHATAXE"
-          :image="SHATAXE"
-          :roles="['World Creator']"
-      />
-      <Member
-          name="BlackWiddow"
-          :image="BlackWiddow"
-          :roles="['Livestream Team']"
-      />
+      <template v-if="false">
+        <Member
+            name="AviDie"
+            :image="AviDie"
+            :roles="['Special Dancer']"
+            :socials="['https://www.instagram.com/avidie_bimbo/']"
+        />
+        <Member
+            name="AliceD"
+            image="https://github.com/4liceD.png?size=256"
+            :roles="['DJ']"
+            :socials="['https://github.com/4liceD', 'https://twitch.tv/4licedj', 'https://twitch.tv/4liced', 'https://twitter.com/4liceD_', 'https://www.youtube.com/channel/UCUhShRY32UCEg44pkTEmZMwa']"
+        />
+        <Member
+            name="Saya"
+            :image="Saya"
+            :roles="['DJ']"
+            :socials="['https://ko-fi.com/sayavr', 'https://www.youtube.com/@DVJSaya', 'https://twitter.com/Saya2023Saya', 'https://vrc.group/SAYA.8833']"
+        />
+        <Member
+            name="KTZLRMZ"
+            :image="KTZLRMZ"
+            :roles="['DJ']"
+            :socials="['https://www.twitch.tv/maxe_killermiez']"
+        />
+        <Member
+            name="MotokoSusubo"
+            :image="MotokoSusubo"
+            :roles="['DJ']"
+        />
+        <Member
+            name="SnugglesPrime"
+            :image="SnugglesPrime"
+            :roles="['DJ']"
+            :socials="['https://twitter.com/snugglesprime']"
+        />
+        <Member
+            name="Willow"
+            :image="willow"
+            :roles="['Photograph']"
+        />
+        <Member
+            name="its just sage"
+            :image="$data['its-just-sage']"
+            :roles="['Security', 'Photograph']"
+            :socials="['https://www.youtube.com/channel/UCc0nSwExRN75mM8bJr4nNyA']"
+        />
+        <Member
+            name="ShadowsWolfVR"
+            :image="shadowwolfvr"
+            :roles="['Security']"
+        />
+        <Member
+            name="Vaalde"
+            :image="vaalde"
+            :roles="['Security','Special Dancer']"
+        />
+        <Member
+            name="Joy-vr"
+            :image="$data['Joy-vr']"
+        />
+        <Member
+            name="SHATAXE"
+            :image="SHATAXE"
+            :roles="['World Creator']"
+        />
+      </template>
     </div>
   </div>
 </template>
