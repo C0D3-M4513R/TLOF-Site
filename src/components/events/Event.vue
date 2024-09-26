@@ -63,10 +63,10 @@ export default {
   <div class="event">
     <details class="detail" :open="expanded ? '': null" :disabled="images?null:''">
       <summary :tabindex="images ? null : '-1'">
+        <img class="poster" v-if="poster" :src="poster" alt="Poster"/>
         <h1>{{name}} - {{humanStartDate}}</h1>
         <h2 v-if="club">at {{club}}</h2>
         <h3 v-if="description">{{description}}</h3>
-        <img class="poster" v-if="poster" :src="poster" alt="Poster"/>
       </summary>
       <div class="desc" v-if="images">
         <TextComponent :text="images" :replacements="replacements"></TextComponent>
@@ -77,7 +77,11 @@ export default {
 
 <style scoped>
 .poster {
-  width: 100%;
+  float: right;
+  height: 9em;
+}
+.event {
+  height: 10em;
 }
 details {
   cursor: pointer;
