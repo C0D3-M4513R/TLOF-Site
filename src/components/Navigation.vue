@@ -17,6 +17,7 @@ import { faYoutube, faDiscord } from "@fortawesome/free-brands-svg-icons";
         <router-link class="nav-item" @click="showMobileMenu = false" :to="{ name: 'FAQ' }">FAQ</router-link>
         <router-link class="nav-item" @click="showMobileMenu = false" :to="{ name: 'Team' }">Team</router-link>
         <router-link class="nav-item" @click="showMobileMenu = false" :to="{ name: 'Events' }">Events</router-link>
+        <router-link class="nav-item" @click="showMobileMenu = false" :to="{ name: 'Partners' }">Partners</router-link>
       </nav>
       <div class="flex-grow-all"></div>
       <div class="navbar-icons" aria-label="Other Useful Links">
