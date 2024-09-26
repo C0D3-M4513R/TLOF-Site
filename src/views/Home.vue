@@ -1,7 +1,6 @@
 <script>
 import MainSection from '@/components/home/sections/Main.vue';
 import AboutSection from '@/components/home/sections/About.vue';
-// import StatsSection from '@/components/home/sections/Stats.vue';
 
 export default {
   head() {
@@ -53,7 +52,6 @@ export default {
   <main>
     <MainSection id="heading" />
     <AboutSection />
-<!--    <StatsSection />-->
   </main>
 </template>
 
