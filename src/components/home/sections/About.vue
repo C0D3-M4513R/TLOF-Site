@@ -14,10 +14,10 @@ export default {
             The Land of Future does Parties in VRChat. We usually are in Club Orion and play Psytrance, Bigroom or Harstyle.
           </p>
           <p>
-            Please come up with more text for here. Please come up with more text for here. Please come up with more text for here. Please come up with more text for here. Please come up with more text for here. Please come up with more text for here. Please come up with more text for here. Please come up with more text for here.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi cumque ipsum, nemo quibusdam temporibus vitae voluptates! Eius et fuga laudantium minus molestias optio rerum voluptates. Asperiores debitis dolor, dolore dolores eaque explicabo facilis illum iure labore minus porro quod sed totam! Ad aliquam aspernatur assumenda dolor, doloremque eius facere iusto, molestias placeat quam quisquam similique sit tempore, totam veniam voluptatem voluptatum. Debitis maxime nam, nemo qui unde voluptatum. Distinctio ea earum harum, itaque modi praesentium similique ut! Accusamus adipisci alias aliquam cupiditate dicta dolor dolorem ducimus et excepturi fugit nobis numquam odio pariatur, reprehenderit rerum sed tempore ut voluptate voluptatibus.
           </p>
           <p>
-            And maybe even more here.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus amet animi aspernatur assumenda autem corporis cumque cupiditate, dicta dignissimos exercitationem explicabo facilis fugiat laudantium magni molestias neque non nostrum numquam perspiciatis quasi quis quos reiciendis similique sint suscipit temporibus tenetur vitae voluptate voluptates voluptatum. Assumenda ducimus excepturi maiores suscipit vel.
           </p>
         </div>
       </div>
