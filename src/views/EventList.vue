@@ -61,6 +61,7 @@ export default {
 </script>
 
 <template>
+  <UnderConstruction/>
   <div class="events">
     <Event
         v-for="event in events"
@@ -77,6 +78,9 @@ export default {
 </template>
 
 <style scoped>
+.events {
+  padding-top: 50px;
+}
 /*borders start*/
 .events > .event {
   border-left: 1px solid var(--color-border);
