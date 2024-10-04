@@ -70,14 +70,6 @@ export default {
 </script>
 
 <template>
-  <div class="warning">
-    <div>
-      <h1>Note: The posters are not yet in their final shape or spot.</h1>
-      <h1>The Event times should be accurate and in local time, though that hasn't been tested so far.</h1>
-      <h1>So please double check the Event times in Discord for now.</h1>
-      <h1>If the times differ, are not in local time or are not accurate, please contact us in Discord.</h1>
-    </div>
-  </div>
   <div id="content">
     <details v-if="pastEvents.length !== 0" :open="futureEvents.length === 0">
       <summary><h1>Previous Events</h1></summary>
