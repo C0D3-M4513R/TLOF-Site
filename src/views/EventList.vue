@@ -122,9 +122,7 @@ details > summary > h1 {
 /*borders start*/
 .events.boarder > .event {
   border-width: 0 1px 0 1px;
-  padding-top: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 0.5em 0.5em 0 1em;
 }
 .events.boarder > .event:first-child {
   border-top-width: 1px;

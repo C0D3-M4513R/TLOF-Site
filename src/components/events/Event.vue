@@ -14,7 +14,7 @@ export default {
       required: true,
     },
     poster: {
-      type: String,
+      type: [ String, Array ],
       required: false,
     },
     club: {
@@ -63,7 +63,8 @@ export default {
   <div class="event">
     <details class="detail" :open="expanded ? '': null" :disabled="images?null:''">
       <summary :tabindex="images ? null : '-1'">
-        <img class="poster" v-if="poster" :src="poster" alt="Poster"/>
+        <img class="poster" v-if="Array.isArray(poster)" v-for="poster of poster" :src="poster" alt="Poster"/>
+        <img class="poster" v-else-if="poster" :src="poster" alt="Poster"/>
         <h1>{{name}} - {{humanStartDate}}</h1>
         <h2 v-if="club">at {{club}}</h2>
         <h3 v-if="description">{{description}}</h3>
@@ -76,6 +77,10 @@ export default {
 </template>
 
 <style scoped>
+.poster:not(:last-of-type) {
+  margin-left: 0.5em;
+}
+
 .poster {
   float: right;
   height: 9em;

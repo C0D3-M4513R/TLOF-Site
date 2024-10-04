@@ -12,14 +12,9 @@ const events = [
     {
         name: "Midmonth Madness",
         startDate: new Date("2024-10-26T22:00:00+02:00"),
-        poster: eventLogos['MMM-Horizontal-GMT2'],
-        club: "Club Orion",
-    },
-    {
-        name: "Quest Rave",
-        startDate: new Date("2024-10-27T01:00:00+02:00"),
-        poster: eventLogos.questRave,
-        club: "Club SHATAXE",
+        poster: [eventLogos['MMM-Horizontal-GMT2'], eventLogos.questRave],
+        club: "Club Shataxe",
+        description: "This Midmonth Madness is a Quest (compatible) Rave.",
     },
     {
         name: "Halloween Party",
