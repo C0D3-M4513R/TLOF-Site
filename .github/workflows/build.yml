@@ -2,7 +2,7 @@ name: Example Push Action
 on:
   push:
     branches:
-     - "master"
+     - "main"
   workflow_dispatch:
 
 
