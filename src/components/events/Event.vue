@@ -125,6 +125,7 @@ details.disabled {
   }
   .poster {
     order: 1337;
+    margin-bottom: 0.5em;
   }
   .poster:not(:first-of-type) {
     margin-left: 0.5em;
