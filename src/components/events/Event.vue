@@ -86,7 +86,7 @@ export default {
   height: 9em;
 }
 .event {
-  height: 10em;
+  min-height: 10em;
 }
 details {
   cursor: pointer;
@@ -103,5 +103,34 @@ details[disabled],
 details.disabled {
   cursor: default;
 }
-
+@media (max-width: 1000px) {
+   details > summary {
+     display: flex;
+     flex-direction: row;
+     flex-flow: wrap;
+   }
+  details > summary > h1 {
+    order: 1;
+  }
+  details > summary > h2 {
+    order: 2;
+  }
+  details > summary > h3 {
+    order: 3;
+  }
+  details > summary > h1,
+  details > summary > h2,
+  details > summary > h3 {
+    min-width: 100%;
+  }
+  .poster {
+    order: 1337;
+  }
+  .poster:not(:first-of-type) {
+    margin-left: 0.5em;
+  }
+  .poster:not(:last-of-type) {
+    margin-left: 0;
+  }
+}
 </style>
