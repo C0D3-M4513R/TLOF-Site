@@ -97,8 +97,7 @@ details > summary {
 details[disabled] summary,
 details.disabled summary {
   cursor: default;
-  pointer-events: none; /* prevents click events */
-  user-select: none; /* prevents text selection */
+  pointer-events: none;
 }
 details[disabled],
 details.disabled {
