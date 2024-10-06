@@ -1,6 +1,6 @@
 import { fileURLToPath, URL } from 'node:url'
 
-import {defineConfig, splitVendorChunkPlugin} from 'vite'
+import {defineConfig} from 'vite'
 import vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
 // noinspection ES6PreferShortImport //npm run preview fails, if this is a short import
@@ -13,7 +13,6 @@ export default defineConfig({
       extensions: ['vue', 'md'],
     }),
     vue(),
-    splitVendorChunkPlugin(),
   ],
   resolve: {
     alias: {
@@ -25,10 +24,18 @@ export default defineConfig({
     assetsInlineLimit: 0,
     rollupOptions: {
       output:{
+        compact: true,
         manualChunks(id) {
           if (id.includes('@fortawesome/free-solid-svg-icons')) return 'fas';
           if (id.includes('@fortawesome/free-regular-svg-icons')) return 'far';
           if (id.includes('@fortawesome/free-brands-svg-icons')) return 'fab';
+          if (id.includes('@fortawesome/fontawesome-common-types')) return 'fa-common-types';
+          if (id.includes('@fortawesome/fontawesome-svg-core')) return 'fa-svg-core';
+          // if (id.includes('@fortawesome/vue-fontawesome')) return 'fa-vue';
+          // if (id.includes('@fortawesome')) return 'fa-vendored';
+          // if (id.includes("@unhead/vue")) return 'unhead-vue';
+          if (id.includes("unhead")) return 'unhead';
+          // if (id.includes("vue")) return 'vue';
         }
       }
     }
