@@ -64,7 +64,7 @@ export default {
     <details class="detail" :open="expanded ? '': null" :disabled="images?null:''">
       <summary :tabindex="images ? null : '-1'">
         <img class="poster" v-if="Array.isArray(poster)" v-for="poster of poster" :src="poster" alt="Poster"/>
-        <img class="poster" v-else-if="poster" :src="poster" alt="Poster"/>
+        <img class="poster" v-else-if="typeof poster === 'string'" :src="poster" alt="Poster"/>
         <h1>{{name}} - {{humanStartDate}}</h1>
         <h2 v-if="club">at {{club}}</h2>
         <h3 v-if="description">{{description}}</h3>
