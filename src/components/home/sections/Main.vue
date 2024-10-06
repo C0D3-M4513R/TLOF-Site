@@ -100,4 +100,12 @@ export default {
     width: 100%;
   }
 }
+
+@media (prefers-color-scheme: light) {
+  #terminal {
+    background-color: var(--dark-color-background);
+    padding: 1em;
+    box-shadow: 0 0 2em var(--color-border);
+  }
+}
 </style>

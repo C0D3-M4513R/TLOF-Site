@@ -311,10 +311,15 @@ export default {
   justify-content: center;
 }
 
-.socials a {
-  color: var(--color-link-secondary);
-}
-.socials a:hover {
-  color: var(--color-link-secondary-hover);
+@media (prefers-color-scheme: light) {
+  .dj {
+    --role-color: hsl(48, 100%, 48%);
+  }
+  .member {
+    color: black;
+  }
+  .socials a:hover {
+    color: hsl(0, 100%, 35%);
+  }
 }
 </style>

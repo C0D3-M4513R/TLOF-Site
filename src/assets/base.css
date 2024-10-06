@@ -27,7 +27,7 @@
 
   --light-color-link: #515151;
   --light-color-link-opposite: #DDDDDD;
-  --light-color-link-hover: #AAAAAA;
+  --light-color-link-hover: hsl(0, 100%, 42%);
   --light-color-link-secondary: #000000;
   --light-color-link-secondary-hover: #333333;
 
@@ -51,7 +51,7 @@
 
   --dark-color-link: #CCCCCC;
   --dark-color-link-opposite: #515151;
-  --dark-color-link-hover: #AAAAAA;
+  --dark-color-link-hover: var(--logo-yellow);
   --dark-color-link-secondary: #FFFFFF;
   --dark-color-link-secondary-hover: #DDDDDD;
 
