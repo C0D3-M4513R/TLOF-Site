@@ -1,7 +1,7 @@
 <script>
 import UnderConstruction from "@/views/UnderConstruction.vue";
 import Event from "@/components/events/Event.vue";
-import {events} from "@/data/events/events.js";
+import {events} from "@/data/events/eventsPosters.js";
 
 export default {
   head() {
