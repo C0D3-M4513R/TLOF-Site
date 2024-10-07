@@ -104,6 +104,11 @@ export const createApp = ViteSSG(
                 component: () => import('@/views/EventList.vue')
             },
             {
+                path: '/events/:datetime/',
+                name: 'Event',
+                component: () => import('@/views/Event.vue')
+            },
+            {
                 path: '/partners/',
                 name: 'Partners',
                 component: () => import('@/views/Partners.vue')

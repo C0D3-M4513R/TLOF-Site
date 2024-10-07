@@ -1,10 +1,13 @@
+// noinspection ES6PreferShortImport //npm run preview fails, if this is a short import
+import fs from 'fs';
 import { fileURLToPath, URL } from 'node:url'
 
 import {defineConfig} from 'vite'
 import vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
-// noinspection ES6PreferShortImport //npm run preview fails, if this is a short import
+
 import {faqIds} from './src/data/faq/questions.js'
+import {eventDates} from "./src/data/events/events.js";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -57,6 +60,9 @@ export default defineConfig({
         switch (route.path) {
           case '/:catchAll(.*)': return [];
           case '/faq/:id?/': return faqIds.map(id => `/faq/${id}/`);
+          case '/events/:datetime/': return eventDates
+              .filter(datetime => fs.existsSync(`src/assets/events/${datetime}`))
+              .map(datetime => `/events/${datetime}/`);
           default: return route.path;
         }
       });

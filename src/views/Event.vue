@@ -15,7 +15,7 @@ export default {
         /*OpenGraph description. Mostly for Social Platforms*/
         {
           property: 'og:description',
-          content: 'Past and Future Events by The Land of Future'
+          content: 'Pictures for the '
         },
         /*Description for Search Enginges*/
         {
@@ -83,6 +83,7 @@ export default {
             :poster="event.poster"
             :description="event.description"
             :club="event.club"
+            :expanded="expanded(event.startDate)"
         />
       </div>
     </details>
@@ -98,6 +99,7 @@ export default {
             :poster="event.poster"
             :description="event.description"
             :club="event.club"
+            :expanded="expanded(event.startDate)"
         />
       </div>
     </details>
@@ -142,7 +144,6 @@ details > summary > h1 {
 .events > .event:last-child {
   border-bottom-left-radius: 0.8rem;
   border-bottom-right-radius: 0.8rem;
-  padding-bottom: 0.5em;
 }
 .events > .event:last-child .desc {
   border-bottom-left-radius: 0.8rem;
