@@ -1,7 +1,8 @@
 <script>
-import UnderConstruction from "@/views/UnderConstruction.vue";
+import {eventImages} from "@/data/events/eventImages.js";
+import {events} from "@/data/events/eventsPosters.js"
 import Event from "@/components/events/Event.vue";
-import {events} from "@/data/events/eventsPosters.js";
+export const isServer = typeof window === 'undefined';
 
 export default {
   head() {
@@ -15,12 +16,12 @@ export default {
         /*OpenGraph description. Mostly for Social Platforms*/
         {
           property: 'og:description',
-          content: 'Pictures for the '
+          content: 'Pictures for the Event ' + this.localEventDate,
         },
         /*Description for Search Enginges*/
         {
           name: 'description',
-          content: 'Past and Future Events by The Land of Future'
+          content: 'Pictures for the Event ' + this.localEventDate,
         },
         {
           property: 'og:image',
@@ -28,7 +29,7 @@ export default {
         },
         {
           property: 'og:url',
-          content: this.global.url + "events/"
+          content: this.global.url + "events/" + this.$route.params.datetime + "/"
         },
         {
           name: 'theme-color',
@@ -37,30 +38,25 @@ export default {
       ],
       link: {
         rel: 'canonical',
-        href: this.global.url + "events/"
+        href: this.global.url + "events/" + this.$route.params.datetime + "/"
       }
     };
   },
   data(){
+    const eventDate = new Date(this.$route.params.datetime);
     return {
-      events,
-    }
-  },
-  methods: {
-    expanded(startDateTime) {
-      const dateTime = this.$route.params.dateTime;
-      if (typeof dateTime === 'undefined') return false;
-      return new Date(dateTime) === startDateTime;
+      event: events.filter(event => event.startDate.getTime() === eventDate.getTime())[0],
+      images: eventImages[eventDate.toISOString()]
     }
   },
   computed: {
-    futureEvents() {
-      const currentDateTime = new Date();
-      return this.events.filter(v=>v.startDate > currentDateTime);
+    eventDate(){
+      return new Date(this.$route.params.datetime);
     },
-    pastEvents() {
-      const currentDateTime = new Date();
-      return this.events.filter(v=>v.startDate <= currentDateTime);
+    localEventDate(){
+      let date = this.eventDate.toLocaleString();
+      if (isServer) date += " UTC";
+      return date;
     },
   },
   components: {
@@ -70,91 +66,25 @@ export default {
 </script>
 
 <template>
-  <div id="content">
-    <details v-if="pastEvents.length !== 0" :open="futureEvents.length === 0">
-      <summary><h1>Previous Events</h1></summary>
-      <div class="events boarder">
-        <Event
-            v-for="event in pastEvents"
-            class="event"
-            :key="event.startDate.toISOString()"
-            :name="event.name"
-            :start-date="event.startDate"
-            :poster="event.poster"
-            :description="event.description"
-            :club="event.club"
-            :expanded="expanded(event.startDate)"
-        />
-      </div>
-    </details>
-    <details v-if="futureEvents.length !== 0" :open="pastEvents.length === 0">
-      <summary><h1>Future Events</h1></summary>
-      <div class="events boarder">
-        <Event
-            v-for="event in futureEvents"
-            class="event"
-            :key="event.startDate.toISOString()"
-            :name="event.name"
-            :start-date="event.startDate"
-            :poster="event.poster"
-            :description="event.description"
-            :club="event.club"
-            :expanded="expanded(event.startDate)"
-        />
-      </div>
-    </details>
+  <div id="wrapper">
+    <div class="heading">
+      <h1>Images for {{event.name}} on {{localEventDate}}</h1>
+      <h2 v-if="event.club">at {{event.club}}</h2>
+      <h3 v-if="event.description">{{event.description}}</h3>
+    </div>
+    <div class="contents">
+      <img v-for="image in images" :src="image" alt="Event Image">
+    </div>
   </div>
 </template>
 
 <style scoped>
-.warning {
-  border: 10px solid red;
+.contents {
+  display: flex;
+  flex-direction: row;
+  gap: .5em;
 }
-.events {
-  width: 95%;
-  margin: 0 auto;
-}
-
-details > summary > h1 {
-  display: inline-block;
-}
-
-/*borders start*/
-.events.boarder > .event {
-  border-width: 0 1px 0 1px;
-  padding: 0.5em 0.5em 0 1em;
-}
-.events.boarder > .event:first-child {
-  border-top-width: 1px;
-
-}
-.events.boarder > .event:last-child {
-  border-bottom-width: 1px;
-}
-.events > .event {
-  border-style: solid;
-  border-color: var(--color-border);
-  border-width: 0;
-}
-
-.events > .event:first-child {
-  border-top-left-radius: 0.8rem;
-  border-top-right-radius: 0.8rem;
-}
-.events > .event:last-child {
-  border-bottom-left-radius: 0.8rem;
-  border-bottom-right-radius: 0.8rem;
-}
-.events > .event:last-child .desc {
-  border-bottom-left-radius: 0.8rem;
-  border-bottom-right-radius: 0.8rem;
-}
-/*borders end*/
-
-.events > .event {
-  background-color: var(--color-background-mute);
-}
-.events > .event:nth-child(even) {
-  background-color: var(--color-background);
+.contents > img {
+  max-width: 50%;
 }
 </style>
