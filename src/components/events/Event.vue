@@ -43,7 +43,6 @@ export default {
     },
     optionalLink(){
       if (typeof eventImages[this.startDateIso] === 'undefined') return null;
-      console.log(this.startDateIso, " exists")
       return {name: 'Event', params: {datetime: this.startDateIso}};
     },
     posterArray(){
