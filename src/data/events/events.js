@@ -8,7 +8,7 @@ const events = [
     {
         name: "Midmonth Madness",
         startDate: new Date("2024-10-26T22:00:00+02:00"),
-        poster: ['MMM-Horizontal-GMT2', 'questRave', 'questRave'],
+        poster: ['MMM-Horizontal-GMT2', 'questRave'],
         club: "Club Shataxe",
         description: "This Midmonth Madness is a Quest (compatible) Rave.",
     },
