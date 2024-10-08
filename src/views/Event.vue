@@ -18,7 +18,7 @@ export default {
           property: 'og:description',
           content: 'Pictures for the Event ' + this.localEventDate,
         },
-        /*Description for Search Enginges*/
+        /*Description for Search Engines*/
         {
           name: 'description',
           content: 'Pictures for the Event ' + this.localEventDate,
