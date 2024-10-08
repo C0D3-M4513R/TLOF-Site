@@ -68,9 +68,11 @@ export default {
 <template>
   <div id="wrapper">
     <div class="heading">
-      <h1>Images for {{event.name}} on {{localEventDate}}</h1>
-      <h2 v-if="event.club">at {{event.club}}</h2>
-      <h3 v-if="event.description">{{event.description}}</h3>
+      <div>
+        <h1>Images for {{event.name}} on {{localEventDate}}</h1>
+        <h2 v-if="event.club">at {{event.club}}</h2>
+        <h3 v-if="event.description">{{event.description}}</h3>
+      </div>
     </div>
     <div class="contents">
       <img v-for="image in images" :src="image" alt="Event Image">
@@ -79,12 +81,19 @@ export default {
 </template>
 
 <style scoped>
+.heading {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 .contents {
   display: flex;
+  justify-content: center;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: .5em;
 }
 .contents > img {
-  max-width: 50%;
+  max-width: 45%;
 }
 </style>
