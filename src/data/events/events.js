@@ -34,6 +34,4 @@ const events = [
 
 const eventDates = events.map((item) => item.startDate.toISOString());
 
-console.log("EventDates are: ", eventDates);
-
 export { events, eventDates };

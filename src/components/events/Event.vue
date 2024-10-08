@@ -1,7 +1,7 @@
 <script>
 import TextComponent from "@/components/faq/TextComponent.vue";
+import {eventImages} from "@/data/events/eventImages.js";
 export const isServer = typeof window === 'undefined';
-import fs from 'fs';
 
 export default {
   name: "Event",
@@ -42,7 +42,7 @@ export default {
       return date;
     },
     optionalLink(){
-      if (!fs.existsSync(`../../assets/events/${this.startDateIso}`)) return null;
+      if (typeof eventImages[this.startDateIso] === 'undefined') return null;
       console.log(this.startDateIso, " exists")
       return {name: 'Event', params: {datetime: this.startDateIso}};
     },
