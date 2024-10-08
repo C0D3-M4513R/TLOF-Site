@@ -3,6 +3,7 @@ import { fileURLToPath, URL } from 'node:url'
 import {defineConfig, splitVendorChunkPlugin} from 'vite'
 import vue from '@vitejs/plugin-vue'
 import Pages from 'vite-plugin-pages'
+import generateSitemap from 'vite-ssg-sitemap'
 // noinspection ES6PreferShortImport //npm run preview fails, if this is a short import
 import {faqIds} from './src/data/faq/questions.js'
 
@@ -50,6 +51,13 @@ export default defineConfig({
         if (route.path === '/:catchAll(.*)') return []
         return route.path === '/faq/:id?/' ? faqIds.map(id => `/faq/${id}/`) : route.path
       });
-    }
+    },
+    /* generate a sitemap */
+    onFinished() {
+      generateSitemap({
+        hostname: "https://tlof.party",
+        exclude: ["/404"],
+      })
+    },
   }
 })
