@@ -57,6 +57,7 @@ export default defineConfig({
       generateSitemap({
         hostname: "https://tlof.party",
         exclude: ["/404"],
+        generateRobotsTxt: false,
       })
     },
   }
