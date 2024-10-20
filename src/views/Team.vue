@@ -77,6 +77,11 @@ export default {
           :roles="['Photograph']"
       />
       <Member
+          name="BlackWiddow"
+          :image="BlackWiddow"
+          :roles="['Livestream Team']"
+      />
+      <Member
           name="TouchMeSama"
           :image="TouchMeSama"
           :roles="['Special Dancer']"
@@ -97,11 +102,6 @@ export default {
           name="Werty"
           :image="Werty"
           :roles="['Special Dancer']"
-      />
-      <Member
-          name="BlackWiddow"
-          :image="BlackWiddow"
-          :roles="['Livestream Team']"
       />
       <Member
           name="Hotdog Milkwater"
