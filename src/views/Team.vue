@@ -69,7 +69,7 @@ export default {
           image="https://github.com/C0D3-M4513R.png?size=256"
           :roles="['Co-Admin', 'Security', 'DJ']"
           :description="['Helps Administrate when necessary', 'Created the WebPage', 'Co-Dj']"
-          :socials="['https://github.com/C0D3-M4513R', 'https://ko-fi.com/c0d3_m4513r','https://twitter.com/C0D3M4513R', 'https://www.twitch.tv/c0d3_m4513r', 'https://www.youtube.com/channel/UC30moJmnYyVmD2RkhRjOxpw']"
+          :socials="['https://github.com/C0D3-M4513R', 'https://ko-fi.com/c0d3_m4513r', 'https://www.twitch.tv/c0d3_m4513r', 'https://www.youtube.com/channel/UC30moJmnYyVmD2RkhRjOxpw']"
       />
       <Member
           name="Fissy"
