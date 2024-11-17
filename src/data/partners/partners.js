@@ -25,7 +25,7 @@ const partners = [
     {
         name: "Heart of Fire",
         socials: ["https://discord.gg/EQXGgntnKw"],
-        linksBack: true,
+        linksBack: false,
         logo: partnerLogos.HeartOfFire,
     }
 ];
