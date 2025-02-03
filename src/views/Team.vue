@@ -99,16 +99,16 @@ export default {
           :socials="['https://www.twitch.tv/scalie_smis']"
       />
       <Member
-          name="Werty"
-          :image="Werty"
-          :roles="['Special Dancer']"
-      />
-      <Member
           name="Hotdog Milkwater"
           :image="$data['hotdog-milkwater']"
           :roles="['Poster Creator']"
       />
       <template v-if="false">
+        <Member
+            name="Werty"
+            :image="Werty"
+            :roles="['Special Dancer']"
+        />
         <Member
             name="AviDie"
             :image="AviDie"
