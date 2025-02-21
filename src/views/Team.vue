@@ -60,7 +60,7 @@ export default {
       <Member
           name="Angelshooter"
           :image="angel"
-          :roles="['Owner', 'Admin']"
+          :roles="['Owner', 'Admin', 'DJ']"
           :description="['Creator & Owner of The Land of Future', 'Main DJ', 'Event Coordinator', 'and much, much more']"
           :socials="['https://linktr.ee/thelandoffuture', 'https://patreon.com/DJTheLandofFuture', 'https://twitter.com/TheLandofFuture', 'https://www.instagram.com/the_land_of_future/', 'https://www.tiktok.com/@thelandoffuture']"
       />
