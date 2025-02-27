@@ -21,12 +21,6 @@ const partners = [
         socials: ["https://discord.com/invite/7bgp63MMbn"],
         linksBack: false,
         logo: partnerLogos.TheFountainOfDreams,
-    },
-    {
-        name: "Heart of Fire",
-        socials: ["https://discord.gg/EQXGgntnKw"],
-        linksBack: false,
-        logo: partnerLogos.HeartOfFire,
     }
 ];
 
