@@ -46,9 +46,9 @@ const events = [
         club: "Club Orion",
     },
     {
-        name: "Midmonth Madness",
-        startDate: new Date("2025-04-19T22:00:00+02:00"),
-        poster: eventLogos['MMM-Horizontal-GMT2'],
+        name: "Easter Party",
+        startDate: new Date("2025-04-13T00:00:00+02:00"),
+        //poster: eventLogos['MMM-Horizontal-GMT2'],
         club: "Club Orion",
     },
     {
