@@ -60,10 +60,10 @@ fn launch() -> rocket::Rocket<rocket::Build> {
         log::info!("Initialized logging");
     }
     let rocket = rocket::build();
-    #[cfg(not(feature = "dockerised"))]
-    let file_path: std::path::PathBuf = rocket.figment().extract_inner("file_path").expect("File Path configuration not found");
-    #[cfg(feature = "dockerised")]
-    let file_path = std::path::PathBuf::from("/static");
+    let file_path = match option_env!("DIST_DIR") {
+        None => rocket.figment().extract_inner("file_path").expect("File Path configuration not found"),
+        Some(v) => std::path::PathBuf::from(v),
+    };
     let rocket = rocket
         .mount("/api", rocket::routes![
             email::send_email,
