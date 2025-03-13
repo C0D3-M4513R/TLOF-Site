@@ -20,6 +20,9 @@ import { faYoutube, faDiscord } from "@fortawesome/free-brands-svg-icons";
         <router-link class="nav-item" @click="showMobileMenu = false" :to="{ name: 'Partners' }">Partners</router-link>
       </nav>
       <div class="flex-grow-all"></div>
+      <nav class="nav-items" aria-label="Navigation Menu">
+        <router-link class="nav-item" @click="showMobileMenu = false" :to="{ name: 'Contact' }">Contact</router-link>
+      </nav>
       <div class="navbar-icons" aria-label="Other Useful Links">
         <a class="navbar-icon" :href="global.discordUrl" target="_blank" aria-label="Discord Link">
           <font-awesome-icon :icon="faDiscord" />

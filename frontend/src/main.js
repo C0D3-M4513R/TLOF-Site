@@ -106,6 +106,11 @@ export const createApp = ViteSSG(
                 name: 'Partners',
                 component: () => import('@/views/Partners.vue')
             },
+            {
+                path: '/contact/',
+                name: 'Contact',
+                component: () => import('@/views/Contact.vue')
+            },
             //Explicitly generate page at 404. Otherwise, SSG doesn't generate a site for this.
             {
                 path: '/404/',
