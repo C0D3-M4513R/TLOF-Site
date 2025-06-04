@@ -72,7 +72,7 @@ const events = [
     },
     {
         name: "RAVE",
-        startDate: new Date("2025-07-06T01:00:00+02:00"),
+        startDate: new Date("2025-06-29T01:00:00+02:00"),
         poster: eventLogos['RAVE-Horizontal-GMT2'],
         club: "Club Orion",
     },
