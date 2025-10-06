@@ -120,6 +120,13 @@ const events = [
         club: "Club Orion",
         description: "Last RAVE this Year!",
     },
+    {
+        name: "RAVE",
+        startDate: new Date("2026-02-01T01:00:00+01:00"),
+        poster: eventLogos['RAVE-Horizontal-GMT1'],
+        club: "Club Orion, ?",
+        description: "First RAVE this Year!",
+    },
 ];
 
 const eventDates = events.map((item) => item.startDate.toISOString());
