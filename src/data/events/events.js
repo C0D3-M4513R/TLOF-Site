@@ -103,7 +103,7 @@ const events = [
     },
     {
         name: "Midmonth Madness",
-        startDate: new Date("2025-10-18T22:00:00+02:00"),
+        startDate: new Date("2025-10-25T22:00:00+02:00"),
         poster: eventLogos['MMM-Horizontal-GMT2'],
         club: "Club Orion",
     },
