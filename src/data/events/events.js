@@ -91,7 +91,7 @@ const events = [
     },
     {
         name: "Midmonth Madness",
-        startDate: new Date("2026-10-18T23:00:00+02:00"),
+        startDate: new Date("2026-10-24T23:00:00+02:00"),
         poster: eventLogos['Midmonth_madness_2026_horizontal_UTC2'],
         club: "Club Neoluma",
     },
